@@ -1,0 +1,140 @@
+body {
+    padding: 0px;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/*===---------------------- MAIN BOARD -----------------------===*/
+#main-board {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: yellow;
+}
+
+#main-row {
+    height: 100%;
+    background-color: grey;
+}
+
+#canvas-board {
+    height: 100%;
+    padding: 0px;
+    background-color: red;
+}
+
+#main-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#select-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#back-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: white;
+}
+
+#data-board .row {
+    min-height: 30px;
+    padding: 0 5px;
+    font-family: "Impact", "Britannic", "Arial Rounded MT";
+}
+
+#data-board .row:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+#data-board .row span:not(:first-child) {
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    border-radius: 12px;
+
+    background-color: rgb(180, 180, 180);
+    color: white;
+    text-align: center;
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+#data-board .row span:first-child {
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: inline-block;
+
+    cursor: default;
+}
+
+#data-board .row span:last-child {
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+#data-board .tmp-npt input {
+    width: 90%;
+    height: 90%;
+    margin: 5%; 
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+/*===---------------------- DASH BOARD -----------------------===*/
+#dash-board {
+    position: fixed;
+    width: 600px;
+    height: 400px;
+    bottom: 10%;
+    left: 10%;
+    background-color: yellow;
+}
+
+#text-board {
+    margin-left: 5%;
+    width: 90%;
+    height: 100px;
+}
+
+#console-board {
+    margin-left: 5%;
+    width: 90%;
+    height: 100px;
+}
