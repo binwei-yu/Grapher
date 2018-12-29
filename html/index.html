@@ -42,21 +42,31 @@
         <!-- Board -->
         <div class="container" id="main-board">
             <div class="row" id="main-row">
-                <div class="col-xs-12 col-sm-9" id="canvas-board">
+                <div class="col-xs-12 col-sm-9" id="left-board">
                     <canvas id="main-canvas"></canvas>
                     <canvas id="select-canvas"></canvas>
                     <canvas id="back-canvas"></canvas>
                 </div>
-                <div class="col-xs-12 col-sm-3" id="data-board"></div>
+                <div class="col-xs-12 col-sm-3" id="right-board">
+                    <div id="data-board"></div>
+                    <div id="add-panel">
+                        <input id="main-node-npt" class="col-xs-offset-1 col-xs-10 col-sm-2" placeholder="M" />
+                        <input id="adj-nodes-npt" class="col-xs-offset-1 col-xs-10 col-xs-offset-0 col-sm-6" placeholder="Adjacent" />
+                        <button id="add-btn" type="button" class="btn btn-default col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-1">
+                            <span>+</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Board -->
 
         <!-- Dashboard -->
         <div id="dash-board">
-            <textarea id="text-board">9,1,2,1,0,4,2,5,3,6,2,8,2,9,2,2,2,0,2,7,2,3,2,4,2,6</textarea>
+            <textarea id="text-board">9,1,0,4,3,6,2,8,2,9,2,0,2,7,2,3,2,4,2,6</textarea>
             <button id="submit-btn" type="button" class="btn btn-primary">Submit</button>
             <button id="clear-btn" type="button" class="btn btn-primary">Clear</button>
+            <button id="draw-btn" type="button" class="btn btn-primary">Draw</button>
             <div class="form-group">
                 <label for="node-amount">Amount</label>
                 <input type="text" class="form-control" id="node-amount" placeholder="">

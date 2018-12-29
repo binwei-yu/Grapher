@@ -19,7 +19,7 @@ nav {
     background-color: grey;
 }
 
-#canvas-board {
+#left-board {
     height: 100%;
     padding: 0px;
     background-color: red;
@@ -47,6 +47,54 @@ nav {
     left: 0px;
     z-index: 1;
     background-color: white;
+}
+
+
+
+
+
+#add-panel {
+    position: absolute;
+    width: 80%;
+    height: 40px;
+    left: 10%;
+
+    border: solid 1px rgb(150, 150, 150);
+    border-radius: 5px;
+
+    background-color: white;
+    box-shadow: 0px 0px 5px #888888;
+}
+
+#add-panel #main-node-npt {
+    height: 28px;
+    margin-top: 6px;
+    border: solid 1px rgb(150, 150, 150);
+    border-radius: 5px;
+    padding: 0px;
+    text-align: center;
+}
+
+#add-panel #adj-nodes-npt {
+    height: 28px;
+    margin-top: 6px;
+    border: solid 1px rgb(150, 150, 150);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#add-panel #add-btn {
+    height: 28px;
+    line-height: 28px;
+    margin-top: 6px;
+    border: solid 1px rgb(150, 150, 150);
+    border-radius: 5px;
+
+    font-family: "Impact", "Britannic", "Arial Rounded MT";
+    color: grey;
+    text-align: center;
+
+    padding: 0px;
 }
 
 #data-board .row {

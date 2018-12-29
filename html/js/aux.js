@@ -2,8 +2,15 @@
  * Author: Vincent Yu
  */
 
-// 1. getLabel(nodeIndex, startChar, mode). 'nodeIndex' represents index of node.
-// 'startChar' rspecifies which character the label starts from.
+// updateAdvancedSetting()
+function updateAS() {
+	isDirected = $("#directed-cbx").is(':checked');
+	isWeighted = $("#weighted-cbx").is(':checked');
+	isSorted = $("#sorted-cbx").is(':checked');
+}
+
+// getLabel(nodeIndex, startChar, mode). 'nodeIndex' represents index of node.
+// 'startChar' specifies which character the label starts from.
 function getLabel(idx, strtChr) {
     if(strtChr >= '0' && strtChr <= '9')
     	return (idx + strtChr.charCodeAt() - 48).toString();
@@ -19,6 +26,8 @@ function getLabel(idx, strtChr) {
 	}
 };
 
+// parse(input, isWeighted, isSorted). 'input' represents the string provided by
+// the user. 'isWeighted' tells if this is a weighted graph.
 function parse(str, isWeighted, isSorted) {
 	var strList = str.match(/(0|[1-9]\d*)(\.[0-9]+)?/g);
 	if(strList != null) {
@@ -38,10 +47,7 @@ function parse(str, isWeighted, isSorted) {
 				i += 2;
 			}
 		}	// for
-		var objects = adjList.objects();
-		for(var key in objects) {
-			console.log(key, objects[key]);
-		};
+		
 		adjListPrint(isWeighted, isSorted);
 	}	// if
 	else {
@@ -51,6 +57,7 @@ function parse(str, isWeighted, isSorted) {
 };
 
 function adjListPrint(isWeighted, isSorted) {
+	$("#data-board").html("");
 	var objects = adjList.objects();
 	for(var key in objects) {
 		$("#data-board").append("<div class=\"row\"><span>" + key + "</span></div>");
@@ -61,5 +68,4 @@ function adjListPrint(isWeighted, isSorted) {
 		}
 		$("#data-board div:last-child").append("<span>+</span>");
 	}
-}
-
+};
